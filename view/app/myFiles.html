@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Files</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="relative h-screen w-screen bg-rose-100 overflow-hidden">
+    <div class="bg-slate-200 w-full h-full flex ">
+      <aside 
+        id="sidebar"
+        style="width:300px; transition:0.3s;background-image: linear-gradient(to right, #243949 0%, #517fa4 100%); " 
+        class="absolute overflow-hidden top-0 left-0 h-full py-6 space-y-12">
+        <div class="flex flex-col items-center">
+          <img class="w-[90px] rounded-full " src="./public/images/profile-pic.jpg" alt="profile">
+          <h1 class="text-md text-gray-200 font-bold">Raghav Sapkota</h1>
+          <h3 class="text-sm text-gray-400 font-medium">raghav.sapkota@gmail.com</h3>
+        </div>
+        <div class="px-8 flex flex-col gap-4">
+          <a href="#">
+            <button class="bg-rose-400 hover:bg-rose-500 w-full font-bold rounded text-white py-1 flex justify-center items-center gap-3">
+              <i class="ri-dashboard-line"></i>
+              Dashboard
+            </button>
+          </a>
+          <a href="#">
+            <button class="bg-rose-400 hover:bg-rose-500 w-full font-bold rounded text-white py-1 flex justify-center items-center gap-3">
+              <i class="ri-file-line"></i>
+              My Files 
+            </button>
+          </a>
+          <a href="#">
+            <button class="bg-rose-400 hover:bg-rose-500 w-full font-bold rounded text-white py-1 flex justify-center items-center gap-3">
+              <i class="ri-share-line"></i>
+              Shared
+            </button>
+          </a>
+          <a href="#">
+            <button class="bg-rose-400 hover:bg-rose-500 w-full font-bold rounded text-white py-1 flex justify-center items-center gap-3">
+              <i class="ri-logout-box-r-line"></i>
+              Logout
+            </button>
+          </a>
+        </div>
+      </aside>
+      <section
+        id="main-content"
+        style="margin:0px 0px 0px 300px; transition: all 0.3s"
+        class="w-full h-screen">
+        <nav class="px-6 w-full bg-white shadow-md flex justify-between items-center">
+          <div class="flex items-center gap-2  py-2">
+            <i class="ri-contrast-2-fill text-3xl text-violet-600"></i>
+            <h1 class="text-xl font-medium">Filemoon</h1>
+          </div>
+          <div class="flex gap-2 ">
+            <div class="bg-red-300 hover:bg-red-400 px-4 py-2 rounded">
+              <i class="ri-logout-box-r-line"></i>
+            </div>
+            <div onClick="hideAndSeek()" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded">
+              <i class="ri-menu-line"></i>
+            </div>
+          </div>
+        </nav>
+        <div class="p-6 space-y-4">
+          <div class="flex justify-between items-center">
+            <h1 class="text-2xl font-medium">My Files</h1>
+            <button onClick="toggleDrawer()"class="px-4 py-2 flex items-center gap-2 bg-green-500 hover:bg-green-600 rounded-md">
+              <div class="text-2xl text-blue-900 font-bold">
+                <i class="ri-add-fill"></i>
+              </div>
+              <h3 class="text-xl text-blue-900">Add a File</h3>
+            </button>
+          </div>
+          <table class="w-full">
+            <tr class="bg-slate-700  text-white">
+              <th class="py-2 px-4 right text-left">Filename</th>
+              <th class="text-left">Type</th>
+              <th class="text-left">Size</th>
+              <th class="text-left">Created</th>
+              <th class="text-left">Action</th>
+            </tr>
+            <tr class="bg-white border-b border-gray-300 ">
+              <td class="py-1 font-medium text-md text-gray-500 px-4">Introduction to HTLM</td>
+              <td class="py-1 font-medium text-md text-gray-500">Video</td>
+              <td class="py-1 font-medium text-md text-gray-500">255 MB</td>
+              <td class="py-1 font-medium text-md text-gray-500">2026-11-17</td>
+              <td>
+                <div class="flex items-center justify-start gap-2">
+                  <button class="border bg-rose-400 hover:bg-rose-500 px-2 py-1 text-xl text-white rounded" >
+                    <i class="ri-delete-bin-4-line"></i>
+                  </button>
+                  <button class="border bg-green-400 hover:bg-green-500 px-2 py-1 text-xl rounded text-white" >
+                    <i class="ri-folder-download-line"></i>
+                  </button>
+                  <button class="border bg-yellow-400 hover:bg-yellow-500 px-2 py-1 text-xl rounded text-white" >
+                  <i class="ri-share-fill"></i>
+                </button>
+                </div>
+              </td>
+            </tr>
+            
+            <tr class="bg-white border-b border-gray-300 ">
+              <td class="py-1 font-medium text-md text-gray-500 px-4">Introduction to HTLM</td>
+              <td class="py-1 font-medium text-md text-gray-500">Video</td>
+              <td class="py-1 font-medium text-md text-gray-500">255 MB</td>
+              <td class="py-1 font-medium text-md text-gray-500">2026-11-17</td>
+              <td>
+                <div class="flex items-center justify-start gap-2">
+                  <button class="border bg-rose-400 hover:bg-rose-500 px-2 py-1 text-xl text-white rounded" >
+                    <i class="ri-delete-bin-4-line"></i>
+                  </button>
+                  <button class="border bg-green-400 hover:bg-green-500 px-2 py-1 text-xl rounded text-white" >
+                    <i class="ri-folder-download-line"></i>
+                  </button>
+                  <button class="border bg-yellow-400 hover:bg-yellow-500 px-2 py-1 text-xl rounded text-white" >
+                  <i class="ri-share-fill"></i>
+                </button>
+                </div>
+              </td>
+            </tr>
+            <tr class="bg-white border-b border-gray-300 ">
+              <td class="py-1 font-medium text-md text-gray-500 px-4">Introduction to HTLM</td>
+              <td class="py-1 font-medium text-md text-gray-500">Video</td>
+              <td class="py-1 font-medium text-md text-gray-500">255 MB</td>
+              <td class="py-1 font-medium text-md text-gray-500">2026-11-17</td>
+              <td>
+                <div class="flex items-center justify-start gap-2">
+                  <button class="border bg-rose-400 hover:bg-rose-500 px-2 py-1 text-xl text-white rounded" >
+                    <i class="ri-delete-bin-4-line"></i>
+                  </button>
+                  <button class="border bg-green-400 hover:bg-green-500 px-2 py-1 text-xl rounded text-white" >
+                    <i class="ri-folder-download-line"></i>
+                  </button>
+                  <button class="border bg-yellow-400 hover:bg-yellow-500 px-2 py-1 text-xl rounded text-white" >
+                  <i class="ri-share-fill"></i>
+                </button>
+                </div>
+              </td>
+            </tr>
+            <tr class="bg-white border-b border-gray-300 ">
+              <td class="py-1 font-medium text-md text-gray-500 px-4">Introduction to HTLM</td>
+              <td class="py-1 font-medium text-md text-gray-500">Video</td>
+              <td class="py-1 font-medium text-md text-gray-500">255 MB</td>
+              <td class="py-1 font-medium text-md text-gray-500">2026-11-17</td>
+              <td>
+                <div class="flex items-center justify-start gap-2">
+                  <button class="border bg-rose-400 hover:bg-rose-500 px-2 py-1 text-xl text-white rounded" >
+                    <i class="ri-delete-bin-4-line"></i>
+                  </button>
+                  <button class="border bg-green-400 hover:bg-green-500 px-2 py-1 text-xl rounded text-white" >
+                    <i class="ri-folder-download-line"></i>
+                  </button>
+                  <button class="border bg-yellow-400 hover:bg-yellow-500 px-2 py-1 text-xl rounded text-white" >
+                  <i class="ri-share-fill"></i>
+                </button>
+                </div>
+              </td>
+            </tr>
+            <tr class="bg-white border-b border-gray-300 ">
+              <td class="py-1 font-medium text-md text-gray-500 px-4">Introduction to HTLM</td>
+              <td class="py-1 font-medium text-md text-gray-500">Video</td>
+              <td class="py-1 font-medium text-md text-gray-500">255 MB</td>
+              <td class="py-1 font-medium text-md text-gray-500">2026-11-17</td>
+              <td>
+                <div class="flex items-center justify-start gap-2">
+                  <button class="border bg-rose-400 hover:bg-rose-500 px-2 py-1 text-xl text-white rounded" >
+                    <i class="ri-delete-bin-4-line"></i>
+                  </button>
+                  <button class="border bg-green-400 hover:bg-green-500 px-2 py-1 text-xl rounded text-white" >
+                    <i class="ri-folder-download-line"></i>
+                  </button>
+                  <button class="border bg-yellow-400 hover:bg-yellow-500 px-2 py-1 text-xl rounded text-white" >
+                  <i class="ri-share-fill"></i>
+                </button>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <div
+        id="drawer"
+        style="width:23%;top:0;right:-23%;transition:all 0.3s"
+        class="absolute overflow-hidden space-y-10 bg-white h-screen">
+        <div class="border-b border-gray-100 px-5 pt-20 pb-4 flex justify-between" >
+          <h1 class="text-xl text-gray-700">Add a new File</h1>
+          <button onClick="toggleDrawer()" class="bg-red-500 hover:bg-red-700 rounded-full p-1 text-white text-sm">
+            <i class="ri-close-fill"></i>
+          </button>
+        </div>
+        <form class="px-6 space-y-10">
+          <div class="flex flex-col gap-2">
+            <label class="text-md font-medium text-gray-500" for="filename">Filename</label>
+            <input 
+              id="filename" 
+              class="px-2 py-2 border outline-transparent focus:outline-blue-400 border-gray-200 rounded" 
+              required 
+              type="text"
+              placeholder="Enter file name"/>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-md font-medium text-gray-500" for="chooseFile">Choose a file</label>
+            <input 
+              id="chooseFile" 
+              class="px-2 py-2 border outline-transparent focus:outline-blue-400 border-gray-200 rounded" 
+              required 
+              type="file"
+          </div>
+          <div class="py-10">
+            <button class="bg-green-500 text-white text-lg px-4 py-2 rounded">Upload file</button>
+          </div>
+        </form>
+        <div class="w-full h-4 bg-gray-400 overflow-hidden  rounded ">
+          <div class="w-6/12 bg-green-500 flex justify-center">
+            <label class="text-xs font-semibold text-white">50%</label>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script src="./jsFiles/myfiles.js"/>
+    <script src="./jsFiles/dashboardLayoutControl.js"/>
+  </body>
+</html>

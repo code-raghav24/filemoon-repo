@@ -19,7 +19,7 @@
       <aside 
         id="sidebar"
         style="width:300px; transition:0.3s;background-image: linear-gradient(to right, #243949 0%, #517fa4 100%); " 
-        class="fixed relative overflow-hidden top-0 left-0 h-full py-6 space-y-12">
+        class="absolute overflow-hidden top-0 left-0 h-full py-6 space-y-12">
         <div class="flex flex-col items-center">
           <img class="w-[90px] rounded-full " src="./public/images/profile-pic.jpg" alt="profile">
           <h1 class="text-md text-gray-200 font-bold">Raghav Sapkota</h1>
@@ -52,10 +52,11 @@
           </a>
         </div>
       </aside>
+
       <section
         id="main-content"
-        style=""
-        class="w-full">
+        style="margin:0px 0px 0px 300px; transition: all 0.3s"
+        class="w-full h-screen">
         <nav class="px-6 w-full bg-white shadow-md flex justify-between items-center">
           <div class="flex items-center gap-2  py-2">
             <i class="ri-contrast-2-fill text-3xl text-violet-600"></i>
@@ -65,7 +66,7 @@
             <div class="bg-red-300 hover:bg-red-400 px-4 py-2 rounded">
               <i class="ri-logout-box-r-line"></i>
             </div>
-            <div onClick="toggleSidebar()" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded">
+            <div onClick="hideAndSeek()" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded">
               <i class="ri-menu-line"></i>
             </div>
           </div>
@@ -120,6 +121,6 @@
         </div>
       </section>
     </div>
-    <script src="./jsFiles/layoutControl.js" />
+    <script src="./jsFiles/myfiles.js" />
   </body>
 </html>
