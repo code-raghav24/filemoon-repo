@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Filemoon</title>
+    <title>Sign-In</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
@@ -15,31 +15,13 @@
     />
   </head>
   <body>
-    <div class="bg-gray-200 w-screen h-screen flex justify-center items-center animate__animated animate__fadeIn">
-      <div class="w-[480px] p-8 bg-white rounded-lg flex flex-col items-center gap-4 animate__animated animate__fadeIn animate__animated animate__pulse">
+    <div class="bg-gray-300 h-screen flex justify-center items-center animate__animated animate__fadeIn ">
+      <div class="w-[420px] p-8 bg-white rounded-lg flex flex-col items-center gap-4 animate__animated animate__fadeIn animate__animated animate__pulse">
         <div class="flex items-center gap-3">
           <i class="ri-contrast-2-fill text-5xl text-violet-600"></i>
           <h1 class="text-2xl font-medium">Filemoon</h1>
         </div>
         <form class="w-full space-y-8">
-          <div class="space-y-1">
-            <label class="block text-sm font-thin text-gray-400" for="fname">FirstName:</label>
-            <input 
-              id="fname"
-              class="w-full p-3 border border-gray-200 rounded-lg"
-              type="text"
-              name="fristname"
-              placeholder="John"/>
-          </div>
-          <div class="space-y-1">
-            <label class="block text-sm font-thin text-gray-400" for="lname">LastName:</label>
-            <input 
-              id="lname"
-              class="w-full p-3 border border-gray-200 rounded-lg"
-              type="text"
-              name="lname"
-              placeholder="Doe"/>
-          </div>
           <div class="space-y-1">
             <label class="block text-sm font-thin text-gray-400" for="email">Email:</label>
             <input 
@@ -58,11 +40,11 @@
               name="email"
               placeholder="*********"/>
           </div>
-          <button class="bg-violet-500 hover:bg-violet-600 w-full p-2 rounded-sm text-white text-sm font-semibold">Sign Up </button>
+          <button class="bg-violet-500 hover:bg-violet-600 w-full p-2 rounded-sm text-white text-sm font-semibold">Sign In</button>
         </form>
         <div class="flex gap-2 items-center">
-          <p class="text-sm text-gray-600">Already have an account ? </p>
-          <a class="text-sm text-green-400 hover:underline" href="#">Sign-In</a>
+          <p class="text-sm text-gray-600">Didn't have an account ? </p>
+          <a class="text-sm text-green-400 hover:underline" href="./signup.html">Signup</a>
         </div>
 
       </div>

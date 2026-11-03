@@ -1,12 +1,13 @@
 const drawer = document.querySelector("#drawer");
+
 let drawerFlag = 0;
 function toggleDrawer () {
   if(drawerFlag === 0){
-    drawer.style.right = "-23%";
+    drawer.style.right = "0%";
     drawerFlag = 1;
   }
   else{
-    drawer.style.right = "0%";
+    drawer.style.right = "-23%";
     drawerFlag = 0;
   }
 }

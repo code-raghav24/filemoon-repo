@@ -27,13 +27,13 @@
           <h3 class="text-sm text-gray-400 font-medium">raghav.sapkota@gmail.com</h3>
         </div>
         <div class="px-8 flex flex-col gap-4">
-          <a href="#">
+          <a href="./index.html">
             <button class="bg-rose-400 hover:bg-rose-500 w-full font-bold rounded text-white py-1 flex justify-center items-center gap-3">
               <i class="ri-dashboard-line"></i>
               Dashboard
             </button>
           </a>
-          <a href="#">
+          <a href="./myFiles.html">
             <button class="bg-rose-400 hover:bg-rose-500 w-full font-bold rounded text-white py-1 flex justify-center items-center gap-3">
               <i class="ri-file-line"></i>
               My Files 
@@ -66,7 +66,7 @@
             <div class="bg-red-300 hover:bg-red-400 px-4 py-2 rounded">
               <i class="ri-logout-box-r-line"></i>
             </div>
-            <div onClick="hideAndSeek()" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded">
+            <div onclick="hideAndSeek()" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded">
               <i class="ri-menu-line"></i>
             </div>
           </div>
@@ -74,7 +74,7 @@
         <div class="p-6 space-y-4">
           <div class="flex justify-between items-center">
             <h1 class="text-2xl font-medium">My Files</h1>
-            <button onClick="toggleDrawer()"class="px-4 py-2 flex items-center gap-2 bg-green-500 hover:bg-green-600 rounded-md">
+            <button onclick="toggleDrawer()"class="px-4 py-2 flex items-center gap-2 bg-green-500 hover:bg-green-600 rounded-md">
               <div class="text-2xl text-blue-900 font-bold">
                 <i class="ri-add-fill"></i>
               </div>
@@ -194,7 +194,7 @@
         class="absolute overflow-hidden space-y-10 bg-white h-screen">
         <div class="border-b border-gray-100 px-5 pt-20 pb-4 flex justify-between" >
           <h1 class="text-xl text-gray-700">Add a new File</h1>
-          <button onClick="toggleDrawer()" class="bg-red-500 hover:bg-red-700 rounded-full p-1 text-white text-sm">
+          <button onclick="toggleDrawer()" class="bg-red-500 hover:bg-red-700 rounded-full p-1 text-white text-sm">
             <i class="ri-close-fill"></i>
           </button>
         </div>
@@ -228,7 +228,6 @@
       </div>
       </div>
     </div>
-    <script src="./jsFiles/myfiles.js"/>
-    <script src="./jsFiles/dashboardLayoutControl.js"/>
+    <script src="./layout.js"> </script>
   </body>
 </html>
